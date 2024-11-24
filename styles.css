@@ -139,6 +139,22 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Ensures no overflow if content exceeds container size */
+}
+
+.about-image1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add some styling */
+}
+
+
 /* Footer */
 footer {
     padding: 20px;
