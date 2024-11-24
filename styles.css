@@ -2,173 +2,479 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace; /* Monospaced font for a tech feel */
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #F5F5DC;
+    background-color: #000; /* Black background */
+    color: #F5F5DC; /* Off-white text */
     text-align: center;
 }
 
 /* Header Styling */
 .header {
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(90deg, #F4D03F, #000);
+	width: 100%;
+    background-color: #F4D03F; /* Gold color */
+    padding: 50px;
+    background: linear-gradient(90deg, #F4D03F, #000); /* Gold to black gradient */
 }
 
 .banner {
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(90deg, purple, gold);
-    text-align: center;
+    width: 100%; /* Ensures the section spans the entire width of the screen */
+    max-width: 100%; /* Prevents overflow */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background: linear-gradient(90deg, purple, gold); /* Purple to gold gradient */
+    text-align: center; /* Centers the content */
 }
 
 .banner-content {
-    padding: 15px;
+    width: 96%;
+	max-width: 96%; /* Keeps it responsive */
+    padding: 20px; /* Adds space around the content */
+}
+
+
+.banner-content {
+    background: linear-gradient(90deg, purple, gold); /* Purple to gold gradient */
+    padding: 20px; /* Add some space around the logo */
+    text-align: center; /* Center the logo horizontally */
+    display: flex; /* Optional: Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.banner-content .styled-image {
+    width: 100%; /* Adjust width */
+	max-width: 100%;
+	padding: 5px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 120px; /* Optional cap on height */
+	border-radius: 50%; /* Ensures logo is circular if it's an image with a transparent background */
+}
+
+.banner-title {
+    font-size: 2em; /* Responsive text size */
+    color: Black; /* Contrasting color for readability */
+    margin: 10px 0;
+}
+
+.banner-subtitle {
+    font-size: 1.2em; /* Slightly smaller subtitle text */
+    color: Purple; /* Match title color */
+    margin: 0;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #8e44ad, #F4D03F); /* green to yellow gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky; /* Keeps the navbar at the top when scrolling */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.nav-list {
+    display: flex; /* Horizontal layout */
+    justify-content: center; /* Center align links */
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-list li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Slightly larger text */
+    font-weight: bold; /* Emphasize links */
+    color: #F5F5DC; /* Off-white text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-list a:hover {
+    color: #000; /* Change to black on hover */
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .nav-list li {
+        margin: 10px 0; /* Add spacing between stacked items */
+    }
+}
+
+/* Adjust the logo size */
+.about-image {
+    width: 300px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio automatically */
+    max-height: 300px; /* Optional: Limit the height to a specific value */
+    margin: 0 auto; /* Center align if needed */
+    display: block; /* Ensure block-level behavior for centering */
+}
+
+.about {
+    background: linear-gradient(to bottom, #ffeb3b, #673ab7); /* Warm, golden yellow to purple gradient */
+    padding: 40px 20px;
     text-align: center;
+    color: #fff;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff9800; /* Warm orange for title */
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #fdfdfd;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: justify;
+}
+
+.about-image-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #ff9800; /* Orange border to match the theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-image1 {
+    width: 500px;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #ff9800; /* Orange border to match the theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.event-image {
+    width: 500px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio automatically */
+    max-height: 500px; /* Optional: Limit the height to a specific value */
+    margin: 0 auto; /* Center align if needed */
+    display: block; /* Ensure block-level behavior for centering */
+}
+
+.events {
+    background: linear-gradient(to bottom, #673ab7, #ff9800); /* Purple to orange gradient for a warm, welcoming feel */
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.events-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.events h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff9800; /* Bright orange color for heading */
+    margin-bottom: 30px;
+}
+
+.event-item {
+    background-color: rgba(0, 0, 0, 0.3); /* Dark background to make the content pop */
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 600px; /* Limit image size to make it look proportional */
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #ff9800; /* Orange border for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-item h3 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffeb3b; /* Bright yellow for the event title */
+    margin-top: 20px;
+}
+
+.event-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #fdfdfd;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: justify;
+}
+
+.event-item p:last-child {
+    margin-bottom: 0;
+}
+
+
+.toy-drives {
+    background: linear-gradient(to bottom, #ff4081, #ffeb3b); /* A warm gradient from pink to yellow symbolizing love and hope */
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff; /* White text for contrast */
+}
+
+.toy-drives-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fdfdfd; /* Soft white text for readability */
+}
+
+.toy-drives h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffeb3b; /* Yellow text for the heading to symbolize hope */
+}
+
+.toy-drives p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.toy-drives-image {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.styled-image {
-    width: 80%;
-    max-width: 150px;
+.toy-image {
+    width: 100%;
+    max-width: 500px; /* Larger size for a more prominent image */
     height: auto;
-    border-radius: 50%;
-    margin: 0 auto;
+    border: 12px solid #ffeb3b; /* Yellow border to match theme */
+    border-radius: 20px; /* Softer rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow to make the image pop */
 }
 
-.banner-title {
-    font-size: 1.5rem;
-    color: black;
-    margin: 10px 0;
-}
-
-.banner-subtitle {
-    font-size: 1rem;
-    color: purple;
-}
-
-/* Navbar Styling */
-.navbar {
-    background: linear-gradient(90deg, #8e44ad, #F4D03F);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    flex-wrap: wrap;
-}
-
-.nav-list li {
-    margin: 5px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #F5F5DC;
-    transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-    color: #000;
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .header {
-        padding: 20px;
-    }
-
-    .banner-title {
-        font-size: 1.2rem;
-    }
-
-    .banner-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .nav-list {
-        flex-direction: column;
-    }
-
-    .nav-list li {
-        margin: 10px 0;
-    }
-
-    .styled-image {
-        max-width: 120px;
-    }
-}
-
-/* Section Styling */
-.about, .events, .toy-drives, .contact-section, .volunteer-section {
-    padding: 30px 10px;
+.toy-image-caption {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #fdfdfd; /* Matches the text style */
+    max-width: 500px;
     text-align: center;
 }
 
-.about h2, .events h2, .toy-drives h2, .contact-section h2, .volunteer-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+
+/* General gradient text styling */
+.gradient-text {
+    background: linear-gradient(90deg, #0000FF, #FFFF00); /* Gradient from blue to yellow */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
-.about p, .events p, .toy-drives p, .contact-section p, .volunteer-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
+/* Apply the gradient class to all major text elements */
+.banner h1,
+.banner p,
+.services p,
+.service-item p,
+.contact p,
+footer p {
+    font-weight: bold; /* Makes the gradient more visible */
 }
 
-.about-image, .event-image, .toy-image {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.banner h1,
+.banner p,
+.services h2,
+.services p,
+.service-item p,
+.contact h2,
+.contact p {
+    font-size: 1.2em;
 }
-
-.about-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: hidden; /* Ensures no overflow if content exceeds container size */
-}
-
-.about-image1 {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add some styling */
-}
-
 
 /* Footer */
 footer {
     padding: 20px;
     background-color: #111;
     color: #F5F5DC;
-    font-size: 0.8rem;
-    text-align: center;
+    font-size: 0.9em;
 }
 
+/* General footer styling */
 footer p {
-    margin: 5px 0;
-    background: linear-gradient(90deg, #0000FF, #FFFF00);
+    margin: 0; /* Reset margin to avoid extra space */
+    background: linear-gradient(90deg, #0000FF, #FFFF00); /* Gradient from blue to yellow */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    background-color: #000;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    color: #F4D03F;
+    font-weight: 700;
+}
+
+.services p {
+    color: #F5F5DC;
+    font-weight: 400;
+}
+
+/* Other Elements */
+.service-wrapper {
+    border: 3px solid #F4D03F; /* Gold border */
+    padding: 20px;
+    border-radius: 10px; /* Optional rounded corners */
+    background: linear-gradient(180deg, #FFFFFF, #D3D3D3); /* White to grey background */
+    max-width: 800px; /* Optional max width for layout */
+    margin: 20px auto; /* Centering */
+    color: #333; /* Text color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-section {
+    background: linear-gradient(90deg, #8e44ad, #F4D03F); /* Purple to Gold gradient */
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.volunteer-section {
+    background: linear-gradient(90deg, #8e44ad, #F4D03F); /* Purple to Gold gradient */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.volunteer-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.volunteer-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.volunteer-section p:last-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    display: inline-block; /* Ensures logo container is inline with text */
+    padding: 10px;
+    border: 5px solid #fff; /* Elegant white border */
+    border-radius: 50%; /* Makes the border circular around the logo */
+	box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8), 0 4px 8px rgba(0, 0, 0, 0.3); /* Glowing + Shadow border */
+
+}
+
+
+.volunteer-logo {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Blog Page Styles */
+.blog-container {
+    padding: 20px;
+    max-width: 800px; /* Optional max width for layout */
+    margin: 20px auto; /* Centering */
+}
+
+/* Blog Entry Styles */
+.blog-entry {
+    border: 2px solid #F4D03F; /* Gold border */
+    border-radius: 10px; /* Optional rounded corners */
+    padding: 20px;
+    margin: 15px 0; /* Space between entries */
+    background-color: #111; /* Dark background for entries */
+}
+
+/* Blog Header Styling */
+.header {
+    background: #111; /* Dark background for header */
+    padding: 20px;
+}
+
+/* Blog Search Input */
+#searchInput {
+    padding: 10px;
+    font-size: 1em;
+    width: 80%; /* Width of the search input */
+    max-width: 400px; /* Max width */
+    margin: 20px auto; /* Centering */
+    border: 2px solid #F4D03F; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
 }
